@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e6ce39d005.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <img src="images/img1.jpg" class="img-preview" id="img-preview" />
+
+    <div class="sliders">
+      <i class="fa-solid fa-angle-left" onclick="left()"></i>
+      <i class="fa-solid fa-angle-right" onclick="right()"></i>
+    </div>
+
+    <div class="images">
+      <img onclick="IMGsrc('images/img1.jpg')" src="images/img1.jpg" class="img" />
+      <img onclick="IMGsrc('images/img2.jpg')" src="images/img2.jpg" class="img" />
+      <img onclick="IMGsrc('images/img3.jpg')" src="images/img3.jpg" class="img" />
+      <img onclick="IMGsrc('images/img4.jpg')" src="images/img4.jpg" class="img" />
+      <img onclick="IMGsrc('images/img5.jpg')" src="images/img5.jpg" class="img" />
+      <img onclick="IMGsrc('images/img6.jpg')" src="images/img6.jpg" class="img" />
+      <img onclick="IMGsrc('images/img7.jpg')" src="images/img7.jpg" class="img" />
+      <img onclick="IMGsrc('images/img8.jpg')" src="images/img8.jpg" class="img" />
+    </div>
+
+    <script>
+      function IMGsrc(source) {
+        document.getElementById("img-preview").src = source;
+        
+
+      }
+      
+
+
+
+      
+      var images = ["images/img1.jpg","images/img2.jpg","images/img3.jpg",
+                    "images/img4.jpg","images/img5.jpg","images/img6.jpg","images/img7.jpg","images/img8.jpg"];
+
+      var i = 0;
+
+      function right() {
+        document.getElementById("img-preview").src = images[i];
+
+        if (i < images.length - 1) {
+          i++;
+        } else {
+          i = 0;
+        }
+      
+      }
+      function left() {
+        document.getElementById("img-preview").src = images[i];
+
+        if (i <= 0 ) i=images.length-1
+
+        i--; 
+      
+      }
+
+
+
+
+
+
+
+
+
+      
+
+
+    </script>
+  </body>
+</html>
